@@ -61,7 +61,7 @@
         "../../packages/queue:build",
         "../../packages/store:build"
       ],
-      "command": "tsc && vite build",
+      "command": "tsc -b && vite build",
       "files": [
         "src/**/*",
         "tsconfig.json",

@@ -2,8 +2,15 @@
   "extends": "../../tsconfig.build.json",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "rootDir": "src",
     "outDir": "./dist"
+  },
+  "references": [
+    {
+      "path": "../store"
+    }
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"]
   }
 }

@@ -5,13 +5,13 @@ import { createQueue } from "@lauf/queue";
 
 /**
  * Configures a {@link @lauf/queue!MessageQueue} that will receive messages with
- * every new value of a {@link @lauf/store!Selector} against a
- * {@link @lauf/store!Store}. Passes the queue and the initial value from the
+ * every new value of a {@link Selector} against a
+ * {@link Store}. Passes the queue and the initial value from the
  * Selector to `handleQueue` then waits for `handleQueue` to return, after which
  * the queue is unsubscribed.
  *
- * @param store {@link @lauf/store!Store} to monitor
- * @param selector a {@link @lauf/store!Selector} function to extract the selected value
+ * @param store {@link Store} to monitor
+ * @param selector a {@link Selector} function to extract the selected value
  * @param handleQueue {@link QueueHandler} function passed the initial selected value and queue
  * @returns the value returned by `handleQueue`
  */
@@ -45,8 +45,8 @@ export async function withSelectorQueue<
 
 /**
  * Invokes the {@link Follower | follower} once with the initial value of
- * {@link @lauf/store!Selector | selector} and again every time
- * {@link @lauf/store!Store | store} has a changed value of `Selector`. If follower is
+ * {@link Selector | selector} and again every time
+ * {@link Store | store} has a changed value of `Selector`. If follower is
  * async, each invocation will be awaited before the next is called.
  *
  * The `follower` is passed the new value each time, and also a

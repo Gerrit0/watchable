@@ -11,9 +11,9 @@ import type { WatchableState } from "./watchable";
  *
  * ## Watching State
  *
- * Assigning a new {@link @lauf/store!Immutable} `RootState` using
- * {@link @lauf/store!WatchableState.write} notifies {@link Watcher | Watchers}
- * previously subscribed using {@link @lauf/store!Watchable.watch}. This mechanism
+ * Assigning a new {@link Immutable} `RootState` using
+ * {@link WatchableState.write} notifies {@link Watcher | Watchers}
+ * previously subscribed using {@link Watchable.watch}. This mechanism
  * ensures that app logic and renderers can track the latest state.
  *
  * ## Immutable State: Motivation
@@ -39,7 +39,7 @@ import type { WatchableState } from "./watchable";
  * Finally, Immutability establishes a basis for advanced debugging techniques
  * such as time-travel debugging since every state change notification includes
  * a momentary snapshot of the app state which can be stored indefinitely.
- *
+ * @interface
  */
 export type Store<State extends RootState> = WatchableState<Immutable<State>>;
 
